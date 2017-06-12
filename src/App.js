@@ -4,6 +4,8 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import ReactDOM from 'react-dom';
+import HomeContainer from './Main.js'
 
 const App = () => (
   <Router>
@@ -21,7 +23,8 @@ const App = () => (
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <h2>Welcome</h2>
+    <HomeContainer />
   </div>
 )
 
