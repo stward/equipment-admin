@@ -77,9 +77,9 @@ class HomeContainer extends Component {
             </TableBody>
           </Table>
         </MuiThemeProvider>
-        <div>
-        <RaisedButton label="Create" primary={false} style={buttonStyle} />
-        </div>
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
+          <RaisedButton label="Create" primary={false} style={buttonStyle} />
+        </MuiThemeProvider>
       </div>
     )
   }
