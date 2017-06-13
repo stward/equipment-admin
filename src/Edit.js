@@ -1,7 +1,23 @@
-import React, { Component } from 'react'
 import TextField from 'material-ui/TextField'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import PropTypes from 'prop-types'
+import injectSheet from 'react-jss'
+import React, { Component } from 'react'
+
+const propTypes = {
+  classes: PropTypes.object
+}
+
+const styles = {
+  editContainer: {
+    '& div': {
+      display: 'block'
+    }
+  }
+}
+
+const enhancer = injectSheet(styles)
 
 class Edit extends Component {
   constructor (props) {
@@ -10,26 +26,47 @@ class Edit extends Component {
   }
 
   render () {
+    const {classes} = this.props
+
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <div>
+        <div className={classes.editContainer}>
+          <h1>Edit Equipment</h1>
           <TextField
-            hintText="Hint Text"
-          /><br />
+            floatingLabelText="Equipment Name"
+          />
           <TextField
-            hintText="Hint Text"
-          /><br />
+            floatingLabelText="LTL"
+          />
           <TextField
-            hintText="Hint Text"
-          /><br />
+            floatingLabelText="Max Length"
+          />
           <TextField
-            hintText="Hint Text"
-          /><br />
+            floatingLabelText="Max Width"
+          />
           <TextField
-            hintText="Hint Text"
-          /><br />
+            floatingLabelText="Max Height"
+          />
           <TextField
-            hintText="Hint Text"
+            floatingLabelText="Max Weight"
+          />
+          <TextField
+            floatingLabelText="OD Length"
+          />
+          <TextField
+            floatingLabelText="OD Width"
+          />
+          <TextField
+            floatingLabelText="OD Height"
+          />
+          <TextField
+            floatingLabelText="OD Weight"
+          />
+          <TextField
+            floatingLabelText="OD Bump"
+          />
+          <TextField
+            floatingLabelText="Rate"
           />
         </div>
       </MuiThemeProvider>
@@ -37,4 +74,6 @@ class Edit extends Component {
   }
 }
 
-export default Edit
+Edit.propTypes = propTypes
+
+export default enhancer(Edit)

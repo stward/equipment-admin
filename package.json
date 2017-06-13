@@ -6,8 +6,10 @@
     "jquery": "^3.2.1",
     "jss": "^7.1.5",
     "material-ui": "^0.18.3",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-jss": "^6.1.1",
     "react-router-dom": "^4.1.1",
     "react-tap-event-plugin": "^2.0.1"
   },
