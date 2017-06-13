@@ -55,8 +55,8 @@ class HomeContainer extends Component {
           </List>
         </TableRowColumn>
         <TableRowColumn style={colStyle}>
-          <RaisedButton label="Edit" primary={true} style={buttonStyle} />
-          <RaisedButton label="Delete" secondary={true} style={buttonStyle} />
+          <RaisedButton className="button" label="Edit" primary={true} style={buttonStyle} href={'/edit'} />
+          <RaisedButton className="button" label="Delete" secondary={true} style={buttonStyle} />
         </TableRowColumn>
       </TableRow>
     ));
@@ -77,6 +77,9 @@ class HomeContainer extends Component {
             </TableBody>
           </Table>
         </MuiThemeProvider>
+        <div>
+        <RaisedButton label="Create" primary={false} style={buttonStyle} />
+        </div>
       </div>
     )
   }
