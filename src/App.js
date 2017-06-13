@@ -12,8 +12,7 @@ const App = () => (
   <Router>
     <div>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/edit">Edit</Link></li>
+        Equipment
       </ul>
 
       <hr/>
@@ -26,7 +25,6 @@ const App = () => (
 
 const Home = () => (
   <div>
-    <h2>Welcome</h2>
     <HomeContainer />
   </div>
 )

@@ -21,8 +21,12 @@ const buttonStyle = {
   display: 'block'
 };
 
+const tableItemStyle = {
+  border: 'black solid 5px'
+}
+
 const colStyle = {
-  verticalAlign: 'top'
+  verticalAlign: 'top',
 }
 
 class HomeContainer extends Component {
@@ -33,7 +37,7 @@ class HomeContainer extends Component {
 
   renderEquipment() {
     return allEquipment.map((x) => (
-      <TableRow>
+      <TableRow style={tableItemStyle}>
         <TableRowColumn style={colStyle}><h2>{x.name}</h2></TableRowColumn>
         <TableRowColumn>
           <List>
