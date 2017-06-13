@@ -1,11 +1,11 @@
 import React from 'react'
 import TextField from 'material-ui/TextField'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const Edit = () => (
+    <MuiThemeProvider muiTheme={getMuiTheme()}>
   <div>
-  <MuiThemeProvider muiTheme={getMuiTheme()}>
     <TextField
       hintText="Hint Text"
     /><br />
@@ -51,8 +51,8 @@ const Edit = () => (
       hintText="Full width"
       fullWidth={true}
     />
-    </MuiThemeProvider>
   </div>
+  </MuiThemeProvider>
 )
 
 export default Edit
