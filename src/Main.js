@@ -1,11 +1,29 @@
+import allEquipment from './equipment'
+import {
+  Table,
+  TableBody,
+  TableHeader,
+  TableHeaderColumn,
+  TableRow,
+  TableRowColumn,
+} from 'material-ui/Table'
+import {
+  List,
+  ListItem
+} from 'material-ui/List'
+import RaisedButton from 'material-ui/RaisedButton'
+import getMuiTheme          from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react'
 
-const equipment = [
-  {name: 'Double Drop Trailer', maxLength: 100},
-  {name: 'Dry Van Trailer', maxLength: 50},
-  {name: 'Extendable Trailer', maxLength: 200},
-  {name: 'Flatbed LTL', maxLength: 90}
-]
+const buttonStyle = {
+  margin: 12,
+  display: 'block'
+};
+
+const colStyle = {
+  verticalAlign: 'top'
+}
 
 class HomeContainer extends Component {
   constructor (props) {
@@ -14,24 +32,47 @@ class HomeContainer extends Component {
   }
 
   renderEquipment() {
-    return equipment.map((x) => (
-      <tr>
-        <td>{x.name}</td>
-        <td>{x.maxLength}</td>
-      </tr>
+    return allEquipment.map((x) => (
+      <TableRow>
+        <TableRowColumn style={colStyle}><h2>{x.name}</h2></TableRowColumn>
+        <TableRowColumn>
+          <List>
+            <ListItem>LTL: {x.ltl.value}</ListItem>
+            <ListItem>Max Length: {x.maxLength}</ListItem>
+            <ListItem>Max Width: {x.maxWidth}</ListItem>
+            <ListItem>Max Height: {x.maxHeight}</ListItem>
+            <ListItem>Max Weight: {x.maxWeight}</ListItem>
+            <ListItem>OD Length: {x.odLength}</ListItem>
+            <ListItem>OD Width: {x.odWidth}</ListItem>
+            <ListItem>OD Height: {x.odHeight}</ListItem>
+            <ListItem>OD Weight: {x.odWeight}</ListItem>
+            <ListItem>OD Bump: {x.odBump}</ListItem>
+            <ListItem>Rate: {x.rate}</ListItem>
+          </List>
+        </TableRowColumn>
+        <TableRowColumn style={colStyle}>
+          <RaisedButton label="Edit" primary={true} style={buttonStyle} />
+          <RaisedButton label="Delete" secondary={true} style={buttonStyle} />
+        </TableRowColumn>
+      </TableRow>
     ));
   }
 
   render () {
     return (
       <div>
-        <table>
-          <tr>
-            <td>Name</td>
-            <td>Max. Length</td>
-          </tr>
-          {this.renderEquipment()}
-        </table>
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
+          <Table>
+            <TableBody displayRowCheckbox={false}>
+              <TableRow>
+                <TableRowColumn><h2>Name</h2></TableRowColumn>
+                <TableRowColumn><h2>Details</h2></TableRowColumn>
+                <TableRowColumn><h2>Actions</h2></TableRowColumn>
+              </TableRow>
+              {this.renderEquipment()}
+            </TableBody>
+          </Table>
+        </MuiThemeProvider>
       </div>
     )
   }
