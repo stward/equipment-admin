@@ -38,16 +38,16 @@ class HomeContainer extends Component {
         <TableRowColumn>
           <List>
             <ListItem>LTL: {String(x.ltl)}</ListItem>
-            <ListItem>Max Length: {x.maxLength}</ListItem>
-            <ListItem>Max Width: {x.maxWidth}</ListItem>
-            <ListItem>Max Height: {x.maxHeight}</ListItem>
-            <ListItem>Max Weight: {x.maxWeight}</ListItem>
-            <ListItem>OD Length: {x.odLength}</ListItem>
-            <ListItem>OD Width: {x.odWidth}</ListItem>
-            <ListItem>OD Height: {x.odHeight}</ListItem>
-            <ListItem>OD Weight: {x.odWeight}</ListItem>
-            <ListItem>OD Bump: {x.odBump}</ListItem>
-            <ListItem>Rate: {x.rate}</ListItem>
+            <ListItem>Max Length: {String(x.maxLength)}</ListItem>
+            <ListItem>Max Width: {String(x.maxWidth)}</ListItem>
+            <ListItem>Max Height: {String(x.maxHeight)}</ListItem>
+            <ListItem>Max Weight: {String(x.maxWeight)}</ListItem>
+            <ListItem>OD Length: {String(x.odLength)}</ListItem>
+            <ListItem>OD Width: {String(x.odWidth)}</ListItem>
+            <ListItem>OD Height: {String(x.odHeight)}</ListItem>
+            <ListItem>OD Weight: {String(x.odWeight)}</ListItem>
+            <ListItem>OD Bump: {String(x.odBump)}</ListItem>
+            <ListItem>Rate: {String(x.rate)}</ListItem>
           </List>
         </TableRowColumn>
         <TableRowColumn style={colStyle}>
