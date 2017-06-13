@@ -37,7 +37,7 @@ class HomeContainer extends Component {
         <TableRowColumn style={colStyle}><h2>{x.name}</h2></TableRowColumn>
         <TableRowColumn>
           <List>
-            <ListItem>LTL: {x.ltl.value}</ListItem>
+            <ListItem>LTL: {String(x.ltl)}</ListItem>
             <ListItem>Max Length: {x.maxLength}</ListItem>
             <ListItem>Max Width: {x.maxWidth}</ListItem>
             <ListItem>Max Height: {x.maxHeight}</ListItem>
