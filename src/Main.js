@@ -20,7 +20,7 @@ import React, { Component } from 'react'
 const buttonStyle = {
   margin: 12,
   display: 'block',
-  backgroundColor: 'green'
+  className: 'buttonStyle'
 };
 
 const tableItemStyle = {
@@ -28,7 +28,7 @@ const tableItemStyle = {
 }
 
 const colStyle = {
-  verticalAlign: 'top',
+  verticalAlign: 'top'
 }
 
 class HomeContainer extends Component {
@@ -40,9 +40,10 @@ class HomeContainer extends Component {
   renderEquipment() {
     return allEquipment.map((x) => (
       <TableRow style={tableItemStyle}>
-        <TableRowColumn style={colStyle}><h2>{x.name}</h2></TableRowColumn>
+
         <TableRowColumn>
           <List>
+          <TableRowColumn style={colStyle}><h2><a href={'/edit'}>{x.name}</a></h2></TableRowColumn>
             <ListItem>LTL: {String(x.ltl)}</ListItem>
             <Divider />
             <ListItem>Max Length: {String(x.maxLength)}</ListItem>
@@ -64,11 +65,9 @@ class HomeContainer extends Component {
             <ListItem>OD Bump: {String(x.odBump)}</ListItem>
             <Divider />
             <ListItem>Rate: {String(x.rate)}</ListItem>
+            <RaisedButton className="button" label="Edit" style={buttonStyle} href={'/edit'} />
+            <RaisedButton className="button" label="Delete" style={buttonStyle} />
           </List>
-        </TableRowColumn>
-        <TableRowColumn style={colStyle}>
-          <RaisedButton className="button" label="Edit" primary={true} style={buttonStyle} href={'/edit'} />
-          <RaisedButton className="button" label="Delete" secondary={true} style={buttonStyle} />
         </TableRowColumn>
       </TableRow>
     ));
@@ -77,15 +76,15 @@ class HomeContainer extends Component {
   render () {
     return (
       <div>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <RaisedButton label="Add New Equipment" primary={false} style={buttonStyle} />
+      </MuiThemeProvider>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <Table>
             <TableBody displayRowCheckbox={false}>
               {this.renderEquipment()}
             </TableBody>
           </Table>
-        </MuiThemeProvider>
-        <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <RaisedButton label="Create" primary={false} style={buttonStyle} />
         </MuiThemeProvider>
       </div>
     )
