@@ -1,6 +1,7 @@
 import TextField from 'material-ui/TextField'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import Paper from 'material-ui/Paper'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import React, { Component } from 'react'
@@ -14,6 +15,12 @@ const styles = {
     '& div': {
       display: 'block'
     }
+  },
+  paperStyle: {
+    padding: '12%',
+    textAlign: 'center',
+    display: 'inline-block',
+    backgroundColor: '#e0e0e0'
   }
 }
 
@@ -30,8 +37,9 @@ class Edit extends Component {
 
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <Paper className={classes.paperStyle} zDepth={1}>
         <div className={classes.editContainer}>
-          <h1>Edit Equipment</h1>
+          <h1>Edit / Create Details</h1>
           <TextField
             floatingLabelText="Equipment Name"
           />
@@ -69,6 +77,7 @@ class Edit extends Component {
             floatingLabelText="Rate"
           />
         </div>
+        </Paper>
       </MuiThemeProvider>
     )
   }

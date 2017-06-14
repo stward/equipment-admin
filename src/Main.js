@@ -24,7 +24,8 @@ const buttonStyle = {
 };
 
 const tableItemStyle = {
-  border: 'black solid 5px'
+  border: 'black solid 5px',
+  backgroundColor: '#e0e0e0'
 }
 
 const colStyle = {
@@ -77,7 +78,7 @@ class HomeContainer extends Component {
     return (
       <div>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <RaisedButton label="Add New Equipment" primary={false} style={buttonStyle} />
+        <RaisedButton label="Add New Equipment" primary={false} style={buttonStyle} href={'/edit'} />
       </MuiThemeProvider>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <Table>

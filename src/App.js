@@ -12,7 +12,7 @@ const App = () => (
   <Router>
     <div>
       <ul>
-        Equipment
+        <h2>Equipment: Admin</h2>
       </ul>
 
       <hr/>
