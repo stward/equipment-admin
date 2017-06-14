@@ -12,13 +12,15 @@ import {
   ListItem
 } from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton'
-import getMuiTheme          from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider     from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import Divider from 'material-ui/Divider'
 import React, { Component } from 'react'
 
 const buttonStyle = {
   margin: 12,
-  display: 'block'
+  display: 'block',
+  backgroundColor: 'green'
 };
 
 const tableItemStyle = {
@@ -42,15 +44,25 @@ class HomeContainer extends Component {
         <TableRowColumn>
           <List>
             <ListItem>LTL: {String(x.ltl)}</ListItem>
+            <Divider />
             <ListItem>Max Length: {String(x.maxLength)}</ListItem>
+            <Divider />
             <ListItem>Max Width: {String(x.maxWidth)}</ListItem>
+            <Divider />
             <ListItem>Max Height: {String(x.maxHeight)}</ListItem>
+            <Divider />
             <ListItem>Max Weight: {String(x.maxWeight)}</ListItem>
+            <Divider />
             <ListItem>OD Length: {String(x.odLength)}</ListItem>
+            <Divider />
             <ListItem>OD Width: {String(x.odWidth)}</ListItem>
+            <Divider />
             <ListItem>OD Height: {String(x.odHeight)}</ListItem>
+            <Divider />
             <ListItem>OD Weight: {String(x.odWeight)}</ListItem>
+            <Divider />
             <ListItem>OD Bump: {String(x.odBump)}</ListItem>
+            <Divider />
             <ListItem>Rate: {String(x.rate)}</ListItem>
           </List>
         </TableRowColumn>
@@ -68,11 +80,6 @@ class HomeContainer extends Component {
         <MuiThemeProvider muiTheme={getMuiTheme()}>
           <Table>
             <TableBody displayRowCheckbox={false}>
-              <TableRow>
-                <TableRowColumn><h2>Name</h2></TableRowColumn>
-                <TableRowColumn><h2>Details</h2></TableRowColumn>
-                <TableRowColumn><h2>Actions</h2></TableRowColumn>
-              </TableRow>
               {this.renderEquipment()}
             </TableBody>
           </Table>
