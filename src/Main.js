@@ -20,7 +20,10 @@ import React, { Component } from 'react'
 const buttonStyle = {
   margin: 12,
   display: 'block',
-  className: 'buttonStyle'
+  className: 'buttonStyle',
+  borderRadius: 20,
+  border: 'solid black 1px',
+  backgroundColor: '#e0e0e0'
 };
 
 const tableItemStyle = {

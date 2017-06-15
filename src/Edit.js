@@ -2,6 +2,8 @@ import TextField from 'material-ui/TextField'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Paper from 'material-ui/Paper'
+import RaisedButton from 'material-ui/RaisedButton'
+
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import React, { Component } from 'react'
@@ -13,16 +15,29 @@ const propTypes = {
 const styles = {
   editContainer: {
     '& div': {
-      display: 'block'
+      display: 'block',
+      verticalAlign: 'top'
     }
   },
   paperStyle: {
-    padding: '12%',
+    paddingLeft: '20%',
+    paddingRight: '20%',
+    marginLeft: 'auto',
+    marginRight: 'auto%',
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#e0e0e0'
   }
 }
+
+const buttonStyle = {
+  margin: 20,
+  display: 'block',
+  className: 'buttonStyle',
+  borderRadius: 20,
+  border: 'solid black 1px',
+  backgroundColor: '#e0e0e0'
+};
 
 const enhancer = injectSheet(styles)
 
@@ -77,6 +92,7 @@ class Edit extends Component {
             floatingLabelText="Rate"
           />
         </div>
+        <RaisedButton label="Submit" primary={false} style={buttonStyle} href={'/home'} />
         </Paper>
       </MuiThemeProvider>
     )
