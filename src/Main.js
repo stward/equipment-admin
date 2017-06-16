@@ -28,11 +28,12 @@ const buttonStyle = {
 
 const tableItemStyle = {
   border: 'black solid 5px',
-  backgroundColor: '#e0e0e0'
+  backgroundColor: '#e0e0e0',
 }
 
 const colStyle = {
-  verticalAlign: 'top'
+  verticalAlign: 'top',
+  borderRadius: 20
 }
 
 class HomeContainer extends Component {
