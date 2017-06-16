@@ -32,8 +32,7 @@ const tableItemStyle = {
 }
 
 const colStyle = {
-  verticalAlign: 'top',
-  borderRadius: 20
+  verticalAlign: 'top'
 }
 
 class HomeContainer extends Component {

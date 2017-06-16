@@ -32,9 +32,7 @@ const styles = {
 
 const buttonStyle = {
   margin: 20,
-  display: 'block',
   className: 'buttonStyle',
-  borderRadius: 20,
   border: 'solid black 1px',
   backgroundColor: '#e0e0e0'
 };
@@ -51,6 +49,12 @@ class Edit extends Component {
     const {classes} = this.props
 
     return (
+      <div>
+      <div>
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
+          <RaisedButton label="Back" primary={false} style={buttonStyle} href={'/home'} />
+        </MuiThemeProvider>
+      </div>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
       <Paper className={classes.paperStyle} zDepth={1}>
         <div className={classes.editContainer}>
@@ -95,6 +99,7 @@ class Edit extends Component {
         <RaisedButton label="Submit" primary={false} style={buttonStyle} href={'/home'} />
         </Paper>
       </MuiThemeProvider>
+      </div>
     )
   }
 }
