@@ -16,6 +16,7 @@ const styles = {
   editContainer: {
     width: '50%',
     display: 'inline-block',
+    overflow: 'hidden',
     verticalAlign: 'top',
     '& div': {
       display: 'block'
@@ -32,7 +33,13 @@ const styles = {
     borderRadius: 20,
     border: 'solid black 1px',
     '& a': {
-      borderRadius: 20
+      borderRadius: 20,
+      '& :hover': {
+        backgroundColor: 'transparent'
+      }
+    },
+    '& :hover': {
+      backgroundColor: 'rgba(0,0,0,0.08)'
     }
   }
 }

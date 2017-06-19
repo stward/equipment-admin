@@ -26,10 +26,13 @@ const styles = {
     border: 'solid black 1px',
     backgroundColor: '#e0e0e0',
     '& a': {
-      borderRadius: 20
+      borderRadius: 20,
+      '& :hover': {
+        backgroundColor: 'transparent'
+      }
     },
-    '& a:hover': {
-      borderRadius: 20
+    '& :hover': {
+      backgroundColor: 'rgba(0,0,0,0.08)'
     }
   },
   tableItem: {
