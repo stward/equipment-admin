@@ -54,26 +54,26 @@ class HomeContainer extends Component {
 
         <TableRowColumn>
           <List>
-          <TableRowColumn className={classes.col}><h2><a href={'/edit'}><FaWrench />{x.name}</a></h2></TableRowColumn>
+            <TableRowColumn className={classes.col}><h2><a href={'/edit'}><FaWrench />{x.name}</a></h2></TableRowColumn>
             <ListItem>LTL: {String(x.ltl)}</ListItem>
             <Divider />
-            <ListItem>Max Length: {String(x.maxLength)}</ListItem>
+            <ListItem><b>Max Length</b>: {String(x.maxLength)}</ListItem>
             <Divider />
-            <ListItem>Max Width: {String(x.maxWidth)}</ListItem>
+            <ListItem><b>Max Width</b>: {String(x.maxWidth)}</ListItem>
             <Divider />
-            <ListItem>Max Height: {String(x.maxHeight)}</ListItem>
+            <ListItem><b>Max Height</b>: {String(x.maxHeight)}</ListItem>
             <Divider />
-            <ListItem>Max Weight: {String(x.maxWeight)}</ListItem>
+            <ListItem><b>Max Weight</b>: {String(x.maxWeight)}</ListItem>
             <Divider />
-            <ListItem>OD Length: {String(x.odLength)}</ListItem>
+            <ListItem><b>OD Length</b>: {String(x.odLength)}</ListItem>
             <Divider />
-            <ListItem>OD Width: {String(x.odWidth)}</ListItem>
+            <ListItem><b>OD Width</b>: {String(x.odWidth)}</ListItem>
             <Divider />
-            <ListItem>OD Height: {String(x.odHeight)}</ListItem>
+            <ListItem><b>OD Height</b>: {String(x.odHeight)}</ListItem>
             <Divider />
-            <ListItem>OD Weight: {String(x.odWeight)}</ListItem>
+            <ListItem><b>OD Weight</b>: {String(x.odWeight)}</ListItem>
             <Divider />
-            <ListItem>OD Bump: {String(x.odBump)}</ListItem>
+            <ListItem><b>OD Bump</b>: {String(x.odBump)}</ListItem>
             <Divider />
             <ListItem>Rate: {String(x.rate)}</ListItem>
             <RaisedButton className={classes.button} label="Edit" href={'/edit'} />
