@@ -22,17 +22,14 @@ const styles = {
   paper: {
     paddingLeft: '20%',
     paddingRight: '20%',
-    marginLeft: 'auto',
-    marginRight: 'auto%',
+    margin: '0 auto',
     textAlign: 'center',
     display: 'inline-block',
-    backgroundColor: '#e0e0e0'
   },
   button: {
     margin: 12,
     borderRadius: 20,
     border: 'solid black 1px',
-    backgroundColor: '#e0e0e0',
     '& a': {
       borderRadius: 20
     }
