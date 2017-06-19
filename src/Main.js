@@ -15,6 +15,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Divider from 'material-ui/Divider'
+import FaWrench from 'react-icons/lib/fa/wrench'
 import React, { Component } from 'react'
 
 const buttonStyle = {
@@ -47,7 +48,7 @@ class HomeContainer extends Component {
 
         <TableRowColumn>
           <List>
-          <TableRowColumn style={colStyle}><h2><a href={'/edit'}>{x.name}</a></h2></TableRowColumn>
+          <TableRowColumn style={colStyle}><h2><a href={'/edit'}><FaWrench />{x.name}</a></h2></TableRowColumn>
             <ListItem>LTL: {String(x.ltl)}</ListItem>
             <Divider />
             <ListItem>Max Length: {String(x.maxLength)}</ListItem>
