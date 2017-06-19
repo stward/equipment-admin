@@ -21,8 +21,7 @@ import React, { Component } from 'react'
 
 const styles = {
   button: {
-    margin: 12,
-    marginBottom: 25,
+    margin: '15px 0px 40px 15px',
     borderRadius: 20,
     border: 'solid black 1px',
     backgroundColor: '#e0e0e0',
