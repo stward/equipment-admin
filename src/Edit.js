@@ -14,17 +14,18 @@ const propTypes = {
 
 const styles = {
   editContainer: {
+    width: '50%',
+    display: 'inline-block',
+    verticalAlign: 'top',
     '& div': {
-      display: 'block',
-      verticalAlign: 'top'
+      display: 'block'
     }
   },
   paper: {
-    paddingLeft: '20%',
-    paddingRight: '20%',
+    paddingTop: '3%',
+    paddingLeft: '10%',
     margin: '0 auto',
-    textAlign: 'center',
-    display: 'inline-block',
+    display: 'block',
   },
   button: {
     margin: 12,
@@ -56,8 +57,8 @@ class Edit extends Component {
       </div>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
       <Paper className={classes.paper} zDepth={1}>
+        <h1>Edit / Create Details</h1>
         <div className={classes.editContainer}>
-          <h1>Edit / Create Details</h1>
           <TextField
             floatingLabelText="Equipment Name"
           />
@@ -93,6 +94,59 @@ class Edit extends Component {
           />
           <TextField
             floatingLabelText="Rate"
+          />
+        </div>
+        <div className={classes.editContainer}>
+          <TextField
+            floatingLabelText="Day Cost"
+          />
+          <TextField
+            floatingLabelText="Day Cost Max Distance"
+          />
+          <TextField
+            floatingLabelText="Escort Height"
+          />
+          <TextField
+            floatingLabelText="Escort Rate Bump"
+          />
+          <TextField
+            floatingLabelText="Escort Width"
+          />
+          <TextField
+            floatingLabelText="Escort Length"
+          />
+          <TextField
+            floatingLabelText="Int'l Border Cost Bump %"
+          />
+          <TextField
+            floatingLabelText="LTL Int'l Rate Bump %"
+          />
+          <TextField
+            floatingLabelText="LTL Max Length %"
+          />
+          <TextField
+            floatingLabelText="LTL Max Weight %"
+          />
+          <TextField
+            floatingLabelText="LTL Short Load Length Limit"
+          />
+          <TextField
+            floatingLabelText="LTL Rate Bump"
+          />
+          <TextField
+            floatingLabelText="OD US Permit Fee"
+          />
+          <TextField
+            floatingLabelText="OD Width"
+          />
+          <TextField
+            floatingLabelText="Overweight Interval"
+          />
+          <TextField
+            floatingLabelText="Overweight Rate Bump"
+          />
+          <TextField
+            floatingLabelText="Overweight Threshold"
           />
         </div>
         <RaisedButton className={classes.button} label="Submit" primary={false} href={'/home'} />
