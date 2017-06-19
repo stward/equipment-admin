@@ -19,7 +19,7 @@ const styles = {
       verticalAlign: 'top'
     }
   },
-  paperStyle: {
+  paper: {
     paddingLeft: '20%',
     paddingRight: '20%',
     marginLeft: 'auto',
@@ -27,15 +27,17 @@ const styles = {
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#e0e0e0'
+  },
+  button: {
+    margin: 12,
+    borderRadius: 20,
+    border: 'solid black 1px',
+    backgroundColor: '#e0e0e0',
+    '& a': {
+      borderRadius: 20
+    }
   }
 }
-
-const buttonStyle = {
-  margin: 20,
-  className: 'buttonStyle',
-  border: 'solid black 1px',
-  backgroundColor: '#e0e0e0'
-};
 
 const enhancer = injectSheet(styles)
 
@@ -52,11 +54,11 @@ class Edit extends Component {
       <div>
       <div>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <RaisedButton label="Back" primary={false} style={buttonStyle} href={'/home'} />
+          <RaisedButton className={classes.button} label="Back" primary={false} href={'/'} />
         </MuiThemeProvider>
       </div>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
-      <Paper className={classes.paperStyle} zDepth={1}>
+      <Paper className={classes.paper} zDepth={1}>
         <div className={classes.editContainer}>
           <h1>Edit / Create Details</h1>
           <TextField
@@ -96,7 +98,7 @@ class Edit extends Component {
             floatingLabelText="Rate"
           />
         </div>
-        <RaisedButton label="Submit" primary={false} style={buttonStyle} href={'/home'} />
+        <RaisedButton className={classes.button} label="Submit" primary={false} href={'/home'} />
         </Paper>
       </MuiThemeProvider>
       </div>
