@@ -50,39 +50,45 @@ class HomeContainer extends Component {
     const {classes} = this.props
 
     return allEquipment.map((x) => (
-      <TableRow className={classes.tableItem}>
-        <TableRowColumn>
-          <h2><a href={'/edit'}><FaWrench />{x.name}</a></h2>
-          <List>
-            <ListItem><b>LTL</b>: {String(x.ltl)}</ListItem>
-            <Divider />
-            <ListItem><b>Max Length</b>: {String(x.maxLength)}</ListItem>
-            <Divider />
-            <ListItem><b>Max Width</b>: {String(x.maxWidth)}</ListItem>
-            <Divider />
-            <ListItem><b>Max Height</b>: {String(x.maxHeight)}</ListItem>
-            <Divider />
-            <ListItem><b>Max Weight</b>: {String(x.maxWeight)}</ListItem>
-            <Divider />
-            <ListItem><b>OD Length</b>: {String(x.odLength)}</ListItem>
-          </List>
-          <RaisedButton className={classes.button} label="Edit" href={'/edit'} />
-          <RaisedButton className={classes.button} label="Delete" href={'#'} />
-        </TableRowColumn>
-        <TableRowColumn>
-          <List>
-            <ListItem><b>OD Width</b>: {String(x.odWidth)}</ListItem>
-            <Divider />
-            <ListItem><b>OD Height</b>: {String(x.odHeight)}</ListItem>
-            <Divider />
-            <ListItem><b>OD Weight</b>: {String(x.odWeight)}</ListItem>
-            <Divider />
-            <ListItem><b>OD Bump</b>: {String(x.odBump)}</ListItem>
-            <Divider />
-            <ListItem><b>Rate</b>: {String(x.rate)}</ListItem>
-          </List>
-        </TableRowColumn>
-      </TableRow>
+      <div>
+        <Table>
+          <TableBody displayRowCheckbox={false}>
+            <TableRow className={classes.tableItem}>
+              <TableRowColumn>
+                <h2><a href={'/edit'}><FaWrench />{x.name}</a></h2>
+                <List>
+                  <ListItem><b>LTL</b>: {String(x.ltl)}</ListItem>
+                  <Divider />
+                  <ListItem><b>Max Length</b>: {String(x.maxLength)}</ListItem>
+                  <Divider />
+                  <ListItem><b>Max Width</b>: {String(x.maxWidth)}</ListItem>
+                  <Divider />
+                  <ListItem><b>Max Height</b>: {String(x.maxHeight)}</ListItem>
+                  <Divider />
+                  <ListItem><b>Max Weight</b>: {String(x.maxWeight)}</ListItem>
+                  <Divider />
+                  <ListItem><b>OD Length</b>: {String(x.odLength)}</ListItem>
+                </List>
+              </TableRowColumn>
+              <TableRowColumn>
+                <List>
+                  <ListItem><b>OD Width</b>: {String(x.odWidth)}</ListItem>
+                  <Divider />
+                  <ListItem><b>OD Height</b>: {String(x.odHeight)}</ListItem>
+                  <Divider />
+                  <ListItem><b>OD Weight</b>: {String(x.odWeight)}</ListItem>
+                  <Divider />
+                  <ListItem><b>OD Bump</b>: {String(x.odBump)}</ListItem>
+                  <Divider />
+                  <ListItem><b>Rate</b>: {String(x.rate)}</ListItem>
+                </List>
+              </TableRowColumn>
+            </TableRow>
+          </TableBody>
+        </Table>
+        <RaisedButton className={classes.button} label="Edit" href={'/edit'} />
+        <RaisedButton className={classes.button} label="Delete" href={'#'} />
+      </div>
     ));
   }
 
@@ -95,11 +101,9 @@ class HomeContainer extends Component {
         <RaisedButton className={classes.button} label="Add New Equipment" primary={false} href={'/edit'} />
       </MuiThemeProvider>
         <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <Table>
-            <TableBody displayRowCheckbox={false}>
-              {this.renderEquipment()}
-            </TableBody>
-          </Table>
+          <div>
+            {this.renderEquipment()}
+          </div>
         </MuiThemeProvider>
       </div>
     )
