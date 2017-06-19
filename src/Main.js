@@ -51,11 +51,10 @@ class HomeContainer extends Component {
 
     return allEquipment.map((x) => (
       <TableRow className={classes.tableItem}>
-
         <TableRowColumn>
+          <h2><a href={'/edit'}><FaWrench />{x.name}</a></h2>
           <List>
-            <TableRowColumn className={classes.col}><h2><a href={'/edit'}><FaWrench />{x.name}</a></h2></TableRowColumn>
-            <ListItem>LTL: {String(x.ltl)}</ListItem>
+            <ListItem><b>LTL</b>: {String(x.ltl)}</ListItem>
             <Divider />
             <ListItem><b>Max Length</b>: {String(x.maxLength)}</ListItem>
             <Divider />
@@ -66,7 +65,12 @@ class HomeContainer extends Component {
             <ListItem><b>Max Weight</b>: {String(x.maxWeight)}</ListItem>
             <Divider />
             <ListItem><b>OD Length</b>: {String(x.odLength)}</ListItem>
-            <Divider />
+          </List>
+          <RaisedButton className={classes.button} label="Edit" href={'/edit'} />
+          <RaisedButton className={classes.button} label="Delete" href={'#'} />
+        </TableRowColumn>
+        <TableRowColumn>
+          <List>
             <ListItem><b>OD Width</b>: {String(x.odWidth)}</ListItem>
             <Divider />
             <ListItem><b>OD Height</b>: {String(x.odHeight)}</ListItem>
@@ -75,9 +79,7 @@ class HomeContainer extends Component {
             <Divider />
             <ListItem><b>OD Bump</b>: {String(x.odBump)}</ListItem>
             <Divider />
-            <ListItem>Rate: {String(x.rate)}</ListItem>
-            <RaisedButton className={classes.button} label="Edit" href={'/edit'} />
-            <RaisedButton className={classes.button} label="Delete" href={'#'} />
+            <ListItem><b>Rate</b>: {String(x.rate)}</ListItem>
           </List>
         </TableRowColumn>
       </TableRow>
