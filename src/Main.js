@@ -57,11 +57,11 @@ class HomeContainer extends Component {
 
     return allEquipment.map((x) => (
       <div>
+        <h2><a href={'/edit'}><FaWrench />{x.name}</a></h2>
         <Table>
           <TableBody displayRowCheckbox={false}>
             <TableRow className={classes.tableItem}>
               <TableRowColumn>
-                <h2><a href={'/edit'}><FaWrench />{x.name}</a></h2>
                 <List>
                   <ListItem><b>LTL</b>: {String(x.ltl)}</ListItem>
                   <Divider />
